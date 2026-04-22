@@ -138,7 +138,7 @@ if __name__ == '__main__' and do_train:
 
     grpoconfig = GRPOConfig(
         # TrainingArguments
-        output_dir=os.path.join(script_dir, f'outputs/grpo_lora/{model_path.rstrip("/").split("/")[-1]}/try1'), # ?
+        output_dir=os.path.join(script_dir, f'outputs/grpo_lora/{model_path.rstrip("/").split("/")[-1]}/try2'), # ?
         overwrite_output_dir=True, # ?
         eval_strategy='steps',
         eval_steps=eval_steps,
