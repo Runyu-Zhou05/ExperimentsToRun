@@ -139,7 +139,7 @@ if __name__ == '__main__' and do_train:
     grpoconfig = GRPOConfig(
         # TrainingArguments
         output_dir=os.path.join(script_dir, f'outputs/grpo_lora/{model_path.rstrip("/").split("/")[-1]}/try2'), # ?
-        overwrite_output_dir=True, # ?
+        overwrite_output_dir=False, # ?
         eval_strategy='steps',
         eval_steps=eval_steps,
         per_device_train_batch_size=batch_size_per_device,
@@ -223,7 +223,7 @@ if __name__ == '__main__' and do_train:
         peft_config=loraconfig,
     )
 
-    resume_from_checkpoint = False
+    resume_from_checkpoint = True
 
     if grpoconfig.local_rank == 0:
         import sys
